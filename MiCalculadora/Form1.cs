@@ -61,6 +61,10 @@ namespace MiCalculadora
         {
 
 
+            if (!string.IsNullOrEmpty(label1.Text))
+            {
+                setResultado();
+            }
 
         }
 
@@ -68,7 +72,11 @@ namespace MiCalculadora
         private void Binario_MouseClick(object sender, EventArgs e)
         {
 
-   
+
+            if (!string.IsNullOrEmpty(label1.Text))
+            {
+                setResultado();
+            }
 
         }
 
