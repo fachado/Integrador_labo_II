@@ -34,11 +34,7 @@ namespace MiCalculadora
 
                     string resultado = calculadora.RealizarOperacion(operador, mostrarEnBinario);
 
-                    if (mostrarEnBinario)
-                    {
-
-                        resultado = calculadora.Numero1.ConvertirASistema(Esistema.Binario, Convert.ToDouble(resultado));
-                    }
+       
 
                     label1.Text = resultado;
                 }
@@ -64,11 +60,7 @@ namespace MiCalculadora
         private void Decima_MouseClick(object sender, EventArgs e)
         {
 
-            calculadora.Esistema = Esistema.Decimal;
-            if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
-            {
-                setResultado();
-            }
+
 
         }
 
@@ -76,11 +68,7 @@ namespace MiCalculadora
         private void Binario_MouseClick(object sender, EventArgs e)
         {
 
-            calculadora.Esistema = Esistema.Binario;
-            if (!string.IsNullOrEmpty(textBox1.Text) && !string.IsNullOrEmpty(textBox2.Text))
-            {
-                setResultado();
-            }
+   
 
         }
 

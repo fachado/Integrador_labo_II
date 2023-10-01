@@ -85,10 +85,29 @@ namespace ClassLibrary1
             return double.TryParse(valor, out resultado);
         }
 
-        private string DecimalABinario(double valor)
+        private static string DecimalABinario(double valor)
         {
-            long integerValue = (long)Math.Abs(valor);
-            return Convert.ToString(integerValue, 2);
+            if (valor == 0)
+            {
+                return "0";
+            }
+
+            long Valor = (long)Math.Abs(valor);
+            string Rbinario = "";
+
+            while (Valor > 0)
+            {
+                long reduc = Valor % 2;
+                Rbinario = reduc + Rbinario;
+                Valor = Valor / 2;
+            }
+
+            if (valor < 0)
+            {
+                Rbinario = "-" + Rbinario;
+            }
+
+            return Rbinario;
         }
 
         public static bool operator !=(Numeracion sistema1, Numeracion sistema2)
