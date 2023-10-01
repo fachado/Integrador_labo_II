@@ -85,7 +85,7 @@ namespace ClassLibrary1
             return double.TryParse(valor, out resultado);
         }
 
-        private static string DecimalABinario(double valor)
+        private string DecimalABinario(double valor)
         {
             if (valor == 0)
             {
